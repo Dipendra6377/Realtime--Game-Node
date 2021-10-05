@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel = "stylesheet", href="/styles/styles.css")
+        title realtime game 
+    body
+        .loginBox
+            form#jsLogin
+                input(placeholder="Whats your nickname", type="text")
+        .gameContainer#jsGame
+            .main
+                #jsNotifs
+                canvas.canvas#jsCanvas
+                .controls#jsControls
+                    button#jsMode Fill
+                    .colors
+                        .color.jsColor(style="background-color:rgb(0, 0, 0)")
+                        .color.jsColor(style="background-color:rgb(255,255,255)")
+                        .color.jsColor(style="background-color:rgb(255,59,48)")
+                        .color.jsColor(style="background-color:rgb(255,149,0)")
+                        .color.jsColor(style="background-color:rgb(255,204,0)")
+                        .color.jsColor(style="background-color:rgb(76,217,100)")
+                        .color.jsColor(style="background-color:rgb(90,200,250)")
+                        .color.jsColor(style="background-color:rgb(0,122,255)")
+                        .color.jsColor(style="background-color:rgb(88,86,214)")
+            .chat 
+                .player__board#jsPBoard
+                ul.chat__messages#jsMessages
+                form.chat__form#jsSendMsg
+                    input(placeholder="write a message",type="text")
+            
+        script.
+            window.events = !{events}
+        script(src="/socket.io/socket.io.js")
+        script(src="/js/source.js")
+        
+            
+
+        
+        
+        
+    
